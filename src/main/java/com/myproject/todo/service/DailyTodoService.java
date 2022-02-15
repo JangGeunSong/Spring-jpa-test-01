@@ -31,7 +31,7 @@ public class DailyTodoService {
         if(result.isPresent()) {
             result.get().setId(dailyTodoObject.getId());
             result.get().setTodo(dailyTodoObject.getTodo());
-            result.get().setDone(dailyTodoObject.isDone());
+            result.get().setComplete(dailyTodoObject.isComplete());;
 
             dailyTodoRepository.save(dailyTodoObject);
         }
