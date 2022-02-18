@@ -6,6 +6,8 @@ import java.util.Optional;
 import com.myproject.todo.data.DailyTodoObject;
 import com.myproject.todo.repository.DailyTodoRepository;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,10 @@ public class DailyTodoService {
     }
 
     public void addDailyTodo(DailyTodoObject dailyTodoObject) {
+        Logger logger = LoggerFactory.getLogger(DailyTodoService.class);
+        logger.info("id : " + dailyTodoObject.getId());
+        logger.info("todo : " + dailyTodoObject.getTodo());
+        logger.info("idComplete : " + dailyTodoObject.isComplete());
         dailyTodoRepository.save(dailyTodoObject);
     }
 
