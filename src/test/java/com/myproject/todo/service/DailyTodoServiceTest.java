@@ -9,13 +9,15 @@ import com.myproject.todo.data.DailyTodoObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 public class DailyTodoServiceTest {
 
     @Autowired
-    DailyTodoService dailyTodoService;
+    private DailyTodoService dailyTodoService;
 
-    DailyTodoObject dailyTodoObject;
+    private DailyTodoObject dailyTodoObject;
 
     @BeforeEach
     public void beforeTest() {
