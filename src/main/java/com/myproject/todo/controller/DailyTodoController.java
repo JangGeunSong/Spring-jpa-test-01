@@ -20,8 +20,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 @RestController
 public class DailyTodoController {
 
-    @Autowired
     DailyTodoService dailyTodoService;
+    
+    @Autowired
+    public DailyTodoController(DailyTodoService dailyTodoService) {
+        this.dailyTodoService = dailyTodoService;
+    }
 
     @GetMapping(value = "/")
     public String getMethodName(@RequestParam String param) {

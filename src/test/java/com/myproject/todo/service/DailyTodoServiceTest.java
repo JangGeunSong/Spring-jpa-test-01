@@ -28,7 +28,7 @@ public class DailyTodoServiceTest {
     public void saveTodoTest() {
         dailyTodoObject = new DailyTodoObject();
 
-        dailyTodoObject.setId(7);
+        dailyTodoObject.setId(2);
         dailyTodoObject.setTodo("Test");
         dailyTodoObject.setComplete(false);
 
@@ -51,7 +51,7 @@ public class DailyTodoServiceTest {
         dailyTodoObject = new DailyTodoObject();
 
         dailyTodoObject.setId(1L);
-        dailyTodoObject.setTodo("진짜 변경");
+        dailyTodoObject.setTodo("진짜로");
         dailyTodoObject.setComplete(true);
 
         dailyTodoService.updateDailyTodo(dailyTodoObject);
@@ -62,7 +62,7 @@ public class DailyTodoServiceTest {
     public void deleteTodoTest() {
         dailyTodoObject = new DailyTodoObject();
 
-        dailyTodoObject.setId(2L);
+        dailyTodoObject.setId(7L);
 
         dailyTodoService.deleteDailyTodo(dailyTodoObject);
     }

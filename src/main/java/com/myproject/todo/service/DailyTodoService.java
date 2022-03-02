@@ -16,8 +16,12 @@ public class DailyTodoService {
     
     // very formal CRUD example for JPA Service
     
-    @Autowired
     private DailyTodoRepository dailyTodoRepository; 
+    
+    @Autowired
+    public DailyTodoService(DailyTodoRepository dailyTodoRepository) {
+        this.dailyTodoRepository = dailyTodoRepository;
+    }
 
     public List<DailyTodoObject> getAllDailyTodo() {
         return dailyTodoRepository.findAll();
